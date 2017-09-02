@@ -3,7 +3,7 @@ Simple webserver into docker (uses shared volumes), it is based on [node-static]
 
 # Pulling docker image from docker hub
 1. Ensure you have [docker](https://www.docker.com) installed
-2. Type: `docker pull jcenzano/webserver`
+2. Type: `docker pull jcenzano/docker-webserver`
 
 # Creating the docker image locally (optional)
 1. Ensure you have docker [docker](https://www.docker.com) and make installed
@@ -16,7 +16,7 @@ echo "It works." > /tmp/test.html
 ```
 2. You can run the webserver against the previous directory typing:
 ```
-docker run --rm -itd -v /tmp:/root/media -p 8080:8080 jcenzano/webserver /root/media -a 0.0.0.0 -p 8080 
+docker run --rm -itd -v /tmp:/root/media -p 8080:8080 jcenzano/docker-webserver /root/media -a 0.0.0.0 -p 8080 
 ```
 The previous command offer through HTTP the contents of local `/tmp/` dir
 3. Using your browser navigate to `http://localhost:8080/test.html`, you shold see "It works."
