@@ -19,6 +19,7 @@ echo "It works." > /tmp/test.html
 docker run --rm -itd -v /tmp:/root/media -p 8080:8080 jcenzano/docker-webserver /root/media -a 0.0.0.0 -p 8080 
 ```
 The previous command offer through HTTP the contents of local `/tmp/` dir
+
 3. Using your browser navigate to `http://localhost:8080/test.html`, you shold see "It works."
 
 The docker container options are the options of [node-static](https://github.com/cloudhead/node-static)
